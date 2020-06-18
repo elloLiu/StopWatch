@@ -12,11 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TimeModel : NSObject<NSCoding>
 
-// 是否处于复位状态
+// 复位
 @property (nonatomic,assign,readonly) BOOL isReset;
 @property (nonatomic,strong,readonly) NSArray<NSNumber *> * times;
 
-// 当不存在时，返回-1
+// 默认-1
 @property (nonatomic,assign,readonly)NSInteger maxIndex;
 @property (nonatomic,assign,readonly)NSInteger minIndex;
 
