@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qr1-MX-Cwp">
+                                <rect key="frame" x="20" y="184" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="JdL-AE-cTO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asI-fx-mXB">
+                                <rect key="frame" x="20" y="324" width="80" height="80"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Daj-P4-GXK"/>
+                                    <constraint firstAttribute="width" constant="80" id="NsQ-5L-Wo8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="计次">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="disabled" title="计次"/>
+                                <state key="selected" title="复位"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resetClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rlx-Zu-XgB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNG-H5-3YV">
+                                <rect key="frame" x="314" y="324" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.3359675294204772" green="0.45583711139896377" blue="0.29902940456443294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="lYc-IL-EbA"/>
+                                    <constraint firstAttribute="width" constant="80" id="uUa-IR-FBX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="启动">
+                                    <color key="titleColor" red="0.25098039215686274" green="0.79607843137254897" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" title="停止">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dfi-rQ-jQn"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7I-NI-sEk">
+                                <rect key="frame" x="20" y="424" width="374" height="0.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="vfc-kh-fh5"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZXm-aT-ivL">
+                                <rect key="frame" x="20" y="424.5" width="374" height="437.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbv-Xo-jSY">
+                                <rect key="frame" x="332" y="64" width="62" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="2Kq-dq-qvG"/>
+                                    <constraint firstAttribute="height" constant="40" id="Jaq-yq-T9X"/>
+                                </constraints>
+                                <state key="normal" title="历史数据">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="historyClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n1M-fK-Rcg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="A7I-NI-sEk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2AV-96-qMb"/>
+                            <constraint firstItem="A7I-NI-sEk" firstAttribute="top" secondItem="asI-fx-mXB" secondAttribute="bottom" constant="20" id="BY8-KT-Mbi"/>
+                            <constraint firstItem="qr1-MX-Cwp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HCg-ur-9Ol"/>
+                            <constraint firstItem="ZXm-aT-ivL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HDW-rU-ksm"/>
+                            <constraint firstItem="ZNG-H5-3YV" firstAttribute="top" secondItem="qr1-MX-Cwp" secondAttribute="bottom" constant="80" id="HaQ-cL-tdH"/>
+                            <constraint firstItem="asI-fx-mXB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="K2H-MX-hDg"/>
+                            <constraint firstItem="asI-fx-mXB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K2j-7n-LhV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qr1-MX-Cwp" secondAttribute="trailing" constant="20" id="QAR-Xj-cgC"/>
+                            <constraint firstItem="ZXm-aT-ivL" firstAttribute="top" secondItem="A7I-NI-sEk" secondAttribute="bottom" id="Ud1-PL-Q5t"/>
+                            <constraint firstItem="ZXm-aT-ivL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZMc-R4-WJ8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A7I-NI-sEk" secondAttribute="trailing" constant="20" id="bTQ-nl-CCL"/>
+                            <constraint firstItem="asI-fx-mXB" firstAttribute="top" secondItem="qr1-MX-Cwp" secondAttribute="bottom" constant="80" id="fwd-6C-Tpy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tbv-Xo-jSY" secondAttribute="trailing" constant="20" id="gg5-fu-g4A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZNG-H5-3YV" secondAttribute="trailing" constant="20" id="oHF-Z2-umB"/>
+                            <constraint firstItem="Tbv-Xo-jSY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="peX-Jj-S3c"/>
+                            <constraint firstItem="qr1-MX-Cwp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="tKg-X7-5Jn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZXm-aT-ivL" secondAttribute="trailing" constant="20" id="yoz-Kn-kJL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="historyBtn" destination="Tbv-Xo-jSY" id="ExF-6A-qey"/>
+                        <outlet property="resetBtn" destination="asI-fx-mXB" id="gfn-Vy-r8X"/>
+                        <outlet property="startBtn" destination="ZNG-H5-3YV" id="mVV-Vg-1nx"/>
+                        <outlet property="tableView" destination="ZXm-aT-ivL" id="u5Y-aL-iXe"/>
+                        <outlet property="timeLab" destination="qr1-MX-Cwp" id="ERN-a3-U9q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+</document>
