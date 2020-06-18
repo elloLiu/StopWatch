@@ -54,6 +54,7 @@
 #pragma mark method
 - (void)reset{
     _isReset = YES;
+    _isHistory = NO;
     _times = [NSMutableArray array];
 }
 
@@ -70,14 +71,24 @@
     [_times replaceObjectAtIndex:0 withObject:@(time)];
 }
 
+- (void)setIsHistory:(BOOL)isHistory{
+    _isHistory = isHistory;
+    _maxIndex = [self maxIndex];
+    _minIndex = [self minIndex];
+}
+
 #pragma mark index
 - (NSInteger)maxIndex{
     if (_times.count <= 2) {
         return -1;
     }
     
-    int maxIndex = 1;
-    for (int i = 2; i < _times.count; i++) {
+    // 默认第0行是正在run的数据，不做比较，所以 max默认为1，begin为2
+    // 历史数据时要比较所有数据，max = 0，begin = 0
+    
+    int maxIndex = _isHistory ? 0 : 1;
+    int beginIndex = _isHistory ? 0 : 2;
+    for (int i = beginIndex; i < _times.count; i++) {
         if ([_times[i] intValue] > [_times[maxIndex] intValue]) {
             maxIndex = i;
         }
@@ -90,8 +101,9 @@
         return -1;
     }
     
-    int minIndex = 1;
-    for (int i = 2; i < _times.count; i++) {
+    int minIndex = _isHistory ? 0 : 1;
+    int beginIndex = _isHistory ? 0 : 2;
+    for (int i = beginIndex; i < _times.count; i++) {
         if ([_times[i] intValue] < [_times[minIndex] intValue]) {
             minIndex = i;
         }

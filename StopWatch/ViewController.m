@@ -121,6 +121,7 @@
     NSString *docDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
     NSString *filePath = [docDirectory stringByAppendingPathComponent:@"time.data"];
     TimeModel *model = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+    model.isHistory = true;
     return model;
 }
 

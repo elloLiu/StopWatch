@@ -20,6 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign,readonly)NSInteger maxIndex;
 @property (nonatomic,assign,readonly)NSInteger minIndex;
 
+// history
+@property (nonatomic,assign) BOOL isHistory;
+
 - (void)recordCountWithCompletion:(nullable void(^)(void))completion;
 - (void)updateTime:(NSTimeInterval)time;
 - (void)reset;

@@ -16,9 +16,9 @@
 		2F2131E3249B8F53007A4469 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2131E2249B8F53007A4469 /* main.m */; };
 		2F2131ED249B8F53007A4469 /* StopWatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2131EC249B8F53007A4469 /* StopWatchTests.m */; };
 		2F2131F8249B8F53007A4469 /* StopWatchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2131F7249B8F53007A4469 /* StopWatchUITests.m */; };
-		2F213208249B9CD6007A4469 /* TimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F213207249B9CD6007A4469 /* TimeTableViewCell.m */; };
 		2F21320C249B9DB4007A4469 /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F21320B249B9DB4007A4469 /* TimeModel.m */; };
 		2F21320F249BA424007A4469 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F21320E249BA424007A4469 /* UIImage+Color.m */; };
+		2F213219249BD83A007A4469 /* TimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F213217249BD83A007A4469 /* TimeTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,12 +57,12 @@
 		2F2131F3249B8F53007A4469 /* StopWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StopWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F2131F7249B8F53007A4469 /* StopWatchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StopWatchUITests.m; sourceTree = "<group>"; };
 		2F2131F9249B8F53007A4469 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F213206249B9CD6007A4469 /* TimeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeTableViewCell.h; sourceTree = "<group>"; };
-		2F213207249B9CD6007A4469 /* TimeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeTableViewCell.m; sourceTree = "<group>"; };
 		2F21320A249B9DB4007A4469 /* TimeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeModel.h; sourceTree = "<group>"; };
 		2F21320B249B9DB4007A4469 /* TimeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeModel.m; sourceTree = "<group>"; };
 		2F21320D249BA424007A4469 /* UIImage+Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
 		2F21320E249BA424007A4469 /* UIImage+Color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		2F213217249BD83A007A4469 /* TimeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTableViewCell.m; sourceTree = "<group>"; };
+		2F213218249BD83A007A4469 /* TimeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTableViewCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,8 +151,8 @@
 		2F213205249B9CB3007A4469 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				2F213206249B9CD6007A4469 /* TimeTableViewCell.h */,
-				2F213207249B9CD6007A4469 /* TimeTableViewCell.m */,
+				2F213218249BD83A007A4469 /* TimeTableViewCell.h */,
+				2F213217249BD83A007A4469 /* TimeTableViewCell.m */,
 				2F21320D249BA424007A4469 /* UIImage+Color.h */,
 				2F21320E249BA424007A4469 /* UIImage+Color.m */,
 			);
@@ -298,12 +298,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F213208249B9CD6007A4469 /* TimeTableViewCell.m in Sources */,
 				2F2131D8249B8F51007A4469 /* ViewController.m in Sources */,
 				2F21320F249BA424007A4469 /* UIImage+Color.m in Sources */,
 				2F2131D2249B8F51007A4469 /* AppDelegate.m in Sources */,
 				2F2131E3249B8F53007A4469 /* main.m in Sources */,
 				2F21320C249B9DB4007A4469 /* TimeModel.m in Sources */,
+				2F213219249BD83A007A4469 /* TimeTableViewCell.m in Sources */,
 				2F2131D5249B8F51007A4469 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
